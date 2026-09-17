@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Redirecting to Checkout — JVNNI</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{background:#050508;color:#e0e0e0;font-family:'Helvetica Neue',Arial,sans-serif;display:flex;align-items:center;justify-content:center;min-height:100vh}
+    .box{text-align:center;padding:2rem}
+    .spinner{width:48px;height:48px;border:3px solid rgba(0,229,255,.15);border-top-color:#00E5FF;border-radius:50%;animation:sp 1s linear infinite;margin:0 auto 1.5rem}
+    @keyframes sp{to{transform:rotate(360deg)}}
+    h1{font-size:1.1rem;font-weight:500;margin-bottom:.5rem}
+    p{font-size:.85rem;color:#888;line-height:1.5}
+    a{color:#00E5FF;text-decoration:none;font-weight:600}
+    a:hover{text-decoration:underline}
+    .brand{font-size:.7rem;color:#555;margin-top:2rem;letter-spacing:2px;text-transform:uppercase}
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="spinner" id="spinner"></div>
+    <h1 id="status">Preparing checkout...</h1>
+    <p id="sub">Adding items to cart</p>
+    <div id="manual" style="display:none;margin-top:1.5rem">
+      <p style="margin-bottom:1rem">If you are not redirected automatically, click below:</p>
+      <a id="manual-link" href="#">Go to Checkout</a>
+    </div>
+    <div class="brand">JVNNI</div>
+  </div>
+
+<script>
+(function() {
+  var SHOP = 'https://721k2s-qn.myshopify.com';
+  var params = new URLSearchParams(window.location.search);
+  var itemsStr = params.get('items') || '';
+  var stage = params.get('stage') || '';
+
+  // Parse items: "47993617842339:1,47993617842340:2"
+  var items = [];
+  if (itemsStr) {
+    itemsStr.split(',').forEach(function(pair) {
+      var parts = pair.split(':');
+      if (parts.length >= 2) {
+        items.push({ id: parts[0], qty: parseInt(parts[1], 10) || 1 });
+      }
+    });
+  }
+
+  // No items and no stage — redirect to shop
+  if (items.length === 0 && stage !== 'done') {
+    document.getElementById('spinner').style.display = 'none';
+    document.getElementById('status').textContent = 'Your cart is empty';
+    document.getElementById('sub').innerHTML = '<a href="/">Continue shopping</a>';
+    return;
+  }
+
+  // Stage: done — items added via AJAX, now redirect to Shopify checkout
+  if (stage === 'done') {
+    document.getElementById('status').textContent = 'Redirecting to secure checkout...';
+    document.getElementById('sub').textContent = 'You will be redirected to Shopify checkout';
+    window.location.href = SHOP + '/checkout';
+    return;
+  }
+
+  // Stage 1: Add items to cart via Shopify AJAX API (single request, no redirect chain)
+  document.getElementById('status').textContent = 'Adding items to cart...';
+
+  fetch(SHOP + '/cart/add.js', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ items: items.map(function(i) { return { id: i.id, quantity: i.qty }; }) })
+  })
+  .then(function(res) { return res.json(); })
+  .then(function(data) {
+    // Items added successfully — redirect to checkout
+    document.getElementById('status').textContent = 'Redirecting to secure checkout...';
+    document.getElementById('sub').textContent = 'You will be redirected to Shopify checkout';
+    window.location.href = SHOP + '/checkout';
+  })
+  .catch(function(err) {
+    // AJAX failed — fall back to form submission method
+    console.error('AJAX cart add failed, falling back to form:', err);
+
+    if (items.length === 0) {
+      window.location.href = '/';
+      return;
+    }
+
+    // Use single form submission for first item, chain remaining
+    var firstItem = items[0];
+    var remaining = items.slice(1);
+
+    var returnTo;
+    if (remaining.length > 0) {
+      var remainingStr = remaining.map(function(i) { return i.id + ':' + i.qty; }).join(',');
+      returnTo = '/checkout/?items=' + encodeURIComponent(remainingStr) + '&stage=chain';
+    } else {
+      returnTo = '/checkout/?stage=done';
+    }
+
+    var form = document.createElement('form');
+    form.method = 'POST';
+    form.action = SHOP + '/cart/add';
+    form.style.display = 'none';
+
+    var idInput = document.createElement('input');
+    idInput.type = 'hidden';
+    idInput.name = 'id';
+    idInput.value = firstItem.id;
+    form.appendChild(idInput);
+
+    var qtyInput = document.createElement('input');
+    qtyInput.type = 'hidden';
+    qtyInput.name = 'quantity';
+    qtyInput.value = firstItem.qty;
+    form.appendChild(qtyInput);
+
+    var retInput = document.createElement('input');
+    retInput.type = 'hidden';
+    retInput.name = 'return_to';
+    retInput.value = returnTo;
+    form.appendChild(retInput);
+
+    document.body.appendChild(form);
+    form.submit();
+  });
+})();
+</script>
+</body>
+</html>

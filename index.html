@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <script>(function(){var r=document.documentElement;r.setAttribute("data-theme","light");r.setAttribute("data-theme-source","default");})();</script>
+  <meta charset="UTF-8">
+  <meta name="google-site-verification" content="pXPKsmh46G1Qphck86HKqaKm02vT0657VuzqESXpZ6Q" />
+  <meta name="google-site-verification" content="12ttG_aIsfGfCX1mSY6sGHke0FE0o1f1LJS2pBaWXg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JVNNI | Premium Streetwear & Designer Fashion</title>
+  <meta name="description" content="Shop authentic designer sneakers, apparel, and accessories from Balenciaga, Off-White, Dior, Amiri, Chrome Hearts and more. Verified authentic. Shipped to your door.">
+
+  <meta property="og:title" content="JVNNI | Premium Streetwear & Designer Fashion">
+  <meta property="og:description" content="Authentic designer sneakers, apparel, and accessories from the world's most coveted brands.">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+  <link rel="icon" type="image/jpeg" href="/img/jvnni-logo.jpeg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="preload" href="fonts/ClashDisplay-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/ClashDisplay-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/ClashDisplay-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css?v=20260917085300">
+  <link rel="stylesheet" href="css/enhancements.css?v=20260917085300">
+  <link rel="stylesheet" href="css/fonts.css?v=20260917085300">
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div class="loader">
+    <div class="loader-logo"><img src="/img/jvnni-logo.jpeg" alt="JVNNI" onerror="this.dataset.f=1;this.src=this.src.includes('/products/')?'../img/jvnni-logo.jpeg':'img/jvnni-logo.jpeg'" width="80" height="80" loading="eager" decoding="async"><span>JVNNI</span></div>
+    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+  </div>
+
+  <!-- Scroll Progress -->
+  <div class="scroll-progress"></div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+
+  <!-- Particle Background -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- Animated Background -->
+  <div class="bg-gradient-mesh"></div>
+  <div class="bg-grid"></div>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <a href="#hero" class="nav-logo" data-scroll-to="hero"><img src="/img/jvnni-logo.jpeg" alt="JVNNI" onerror="this.dataset.f=1;this.src=this.src.includes('/products/')?'../img/jvnni-logo.jpeg':'img/jvnni-logo.jpeg'" width="34" height="34" loading="eager" decoding="async"><span>JVNNI</span></a>
+    <ul class="nav-links">
+      <li><a href="#hero" class="nav-link active" data-scroll-to="hero">Home</a></li>
+      <li><a href="#shop" class="nav-link" data-scroll-to="shop">Shop</a></li>
+      <li><a href="#shop" class="nav-link" data-scroll-to="shop">Brands</a></li>
+      <li><a href="reviews.html" class="nav-link">Reviews</a></li>
+      <li><a href="#contact" class="nav-link" data-scroll-to="contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="nav-icon-btn" aria-label="Search" onclick="document.getElementById('smart-search').focus();document.getElementById('shop').scrollIntoView({behavior:'smooth'})">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+      </button>
+      <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+      </button>
+      <button class="nav-icon-btn nav-cart" id="nav-cart-btn" aria-label="Cart">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 01-8 0"/></svg>
+        <span class="nav-cart-badge">0</span>
+      </button>
+      <button class="nav-menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- Clean Hero -->
+  <section class="hero" id="hero">
+    <!-- Just the logo, clean and big -->
+    <h1 class="hero-logo-text parallax" data-parallax-speed="0.03">JVNNI<span class="accent-dot">.</span></h1>
+
+
+    <!-- Neon Marquee Bar -->
+    <div class="neon-bar">
+      <div class="neon-bar-track">
+        <span>FREE SHIPPING ON ORDERS OVER $500</span>
+        <span class="neon-bar-dot">◆</span>
+        <span>100% AUTHENTIC GUARANTEED</span>
+        <span class="neon-bar-dot">◆</span>
+        <span>EXPERT VERIFIED</span>
+        <span class="neon-bar-dot">◆</span>
+        <span>FREE SHIPPING ON ORDERS OVER $500</span>
+        <span class="neon-bar-dot">◆</span>
+        <span>100% AUTHENTIC GUARANTEED</span>
+        <span class="neon-bar-dot">◆</span>
+        <span>EXPERT VERIFIED</span>
+        <span class="neon-bar-dot">◆</span>
+      </div>
+    </div>
+
+    <!-- CTAs -->
+    <div class="hero-bottom">
+      <div class="hero-cta">
+        <button class="btn-3d btn-3d-primary" data-scroll-to="shop" data-magnetic>
+          Shop Collection
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+        <a href="reviews.html" class="btn-3d btn-3d-ghost" data-magnetic>View Reviews</a>
+      </div>
+    </div>
+
+    <!-- 3D Shoe Carousel + brand clicker — sits below the CTAs, above the stripes -->
+    <div class="hero-carousel-block">
+      <svg class="frame-runner" aria-hidden="true" focusable="false"><rect class="frame-runner-glow"/><rect class="frame-runner-core"/></svg>
+      <div class="shoe-carousel-stage" id="shoe-carousel-stage">
+        <div class="shoe-carousel-track" id="shoe-carousel-track"></div>
+      </div>
+    <div class="shoe-carousel-nav">
+      <button class="shoe-carousel-btn" id="shoe-prev" aria-label="Previous">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <div class="shoe-carousel-info" id="shoe-carousel-info">
+        <span class="shoe-carousel-brand"></span>
+      </div>
+      <button class="shoe-carousel-btn" id="shoe-next" aria-label="Next">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+    </div>
+    </div>
+
+    <!-- Moving brand names stripe -->
+    <div class="hero-stripe">
+      <div class="hero-stripe-track" id="brand-marquee-track">
+        <span>BALENCIAGA</span><span>OFF-WHITE</span><span>DIOR</span><span>AMIRI</span><span>PRADA</span><span>GUCCI</span><span>LOUIS VUITTON</span><span>GOYARD</span><span>RICK OWENS</span><span>CHROME HEARTS</span><span>PALACE</span><span>YSL</span>
+        <span>BALENCIAGA</span><span>OFF-WHITE</span><span>DIOR</span><span>AMIRI</span><span>PRADA</span><span>GUCCI</span><span>LOUIS VUITTON</span><span>GOYARD</span><span>RICK OWENS</span><span>CHROME HEARTS</span><span>PALACE</span><span>YSL</span>
+      </div>
+    </div>
+
+    <!-- Moving stats stripe (low opacity) -->
+    <div class="hero-stripe hero-stripe-alt">
+      <div class="hero-stripe-track-alt">
+        <span>198+ PRODUCTS</span><span>26+ BRANDS</span><span>100% AUTHENTIC</span><span>FREE SHIPPING OVER $500</span><span>EXPERT VERIFIED</span><span>SECURE CHECKOUT</span>
+        <span>198+ PRODUCTS</span><span>26+ BRANDS</span><span>100% AUTHENTIC</span><span>FREE SHIPPING OVER $500</span><span>EXPERT VERIFIED</span><span>SECURE CHECKOUT</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shop Section -->
+  <section class="section" id="shop">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">Just Dropped</span>
+      <h2 class="section-title">Shop the Collection</h2>
+      <p class="section-subtitle">The latest additions to our curated collection of premium streetwear.</p>
+    </div>
+
+    <!-- Smart Search -->
+    <div class="search-wrap reveal">
+      <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+      <input type="text" class="search-input" id="smart-search" placeholder="Search by brand, style, color, or ask 'sneakers under $400'...">
+    </div>
+
+    <!-- Category Pills + Sort -->
+    <div class="category-pills reveal" id="category-pills"></div>
+
+    <!-- Brand Filter Pills -->
+    <div class="brand-pills reveal" id="brand-pills"></div>
+
+    <!-- Product Grid -->
+    <div class="product-grid" id="product-grid"></div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- Authenticity Section -->
+  <section class="section promise" id="promise" style="padding-top: var(--space-24); padding-bottom: var(--space-24);">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">Our Promise</span>
+      <h2 class="section-title">Authenticity Guaranteed</h2>
+      <p class="section-subtitle">Every item is rigorously verified by our team of experts before it reaches you.</p>
+    </div>
+
+    <div class="promise-grid">
+      <div class="promise-card reveal glass-card gradient-border">
+        <div class="promise-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"/></svg>
+        </div>
+        <h3 class="promise-title">Expert Verified</h3>
+        <p class="promise-desc">Every item is authenticated by our team of experts. We source directly from authorized retailers and trusted consignors.</p>
+      </div>
+      <div class="promise-card reveal reveal-delay-1 glass-card gradient-border">
+        <div class="promise-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V7M3 7l2-3h14l2 3M3 7h18M8 12h8"/></svg>
+        </div>
+        <h3 class="promise-title">Original Packaging</h3>
+        <p class="promise-desc">All items come with original box, tags, and packaging. Receipt and proof of authenticity included.</p>
+      </div>
+      <div class="promise-card reveal reveal-delay-2 glass-card gradient-border">
+        <div class="promise-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
+        <h3 class="promise-title">Fast Shipping</h3>
+        <p class="promise-desc">Free shipping on orders over $500. Most orders arrive within 3-5 business days with tracking.</p>
+      </div>
+      <div class="promise-card reveal reveal-delay-3 glass-card gradient-border">
+        <div class="promise-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7v10a2 2 0 002 2h16a2 2 0 002-2V7L12 2zM12 22V12M2 7l10 5 10-5"/></svg>
+        </div>
+        <h3 class="promise-title">Secure Checkout</h3>
+        <p class="promise-desc">Your payment information is encrypted and secure. Shop with confidence on our verified platform.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- Reviews Preview -->
+  <section class="section reviews" id="reviews-preview">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">Customer Feedback</span>
+      <h2 class="section-title">What Our Customers Say</h2>
+      <p class="section-subtitle">Real reviews from verified buyers who trust JVNNI for their designer fashion needs.</p>
+    </div>
+
+    <div class="reviews-summary reveal">
+      <div class="reviews-score">
+        <div class="reviews-score-value" data-counter="5" data-counter-suffix=".0">0</div>
+        <div class="reviews-score-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <div class="reviews-score-label">Based on verified purchases</div>
+      </div>
+    </div>
+
+    <div class="reviews-grid">
+      <div class="review-card reveal glass-card">
+        <div class="review-header">
+          <div class="review-avatar">M</div>
+          <div><div class="review-name">Marcus T.</div><div class="review-date">Verified Purchase</div></div>
+        </div>
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">Sneakers arrived in 3 days, brand new in box with all tags. Legit check passed on every pair I've ordered. JVNNI is my go-to for designer shoes now.</p>
+        <span class="review-product">Balenciaga Track Runner White/Green</span>
+      </div>
+
+      <div class="review-card reveal reveal-delay-1 glass-card">
+        <div class="review-header">
+          <div class="review-avatar">J</div>
+          <div><div class="review-name">Jasmine R.</div><div class="review-date">Verified Purchase</div></div>
+        </div>
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">I was nervous about ordering designer items online but the authenticity guarantee is real. My Dior B22s came with receipt and original packaging. Couldn't be happier.</p>
+        <span class="review-product">Dior B22 Black/Green</span>
+      </div>
+
+      <div class="review-card reveal reveal-delay-2 glass-card">
+        <div class="review-header">
+          <div class="review-avatar">D</div>
+          <div><div class="review-name">David K.</div><div class="review-date">Verified Purchase</div></div>
+        </div>
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">Great hoodie overall — material is thick and quality is there. Took off one star because shipping took a week instead of the advertised 3-5 days. Still would recommend.</p>
+        <span class="review-product">Chrome Hearts Floral Hoodie</span>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top: var(--space-10);" class="reveal">
+      <a href="reviews.html" class="btn-3d btn-3d-ghost" data-magnetic>Read All Reviews</a>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section contact" id="contact">
+    <div class="contact-wrap">
+      <div class="section-header reveal">
+        <span class="section-eyebrow">Get In Touch</span>
+        <h2 class="section-title">Questions?</h2>
+        <p class="section-subtitle">Questions about a product, order, or authenticity? We're here to help.</p>
+      </div>
+      <form class="contact-form reveal" id="contact-form">
+        <input type="text" class="contact-input" name="name" placeholder="Your Name" required>
+        <input type="email" class="contact-input" name="email" placeholder="Email Address" required>
+        <textarea class="contact-textarea" name="message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn-3d btn-3d-primary" data-magnetic style="align-self: flex-start;">
+          Send Message
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div>
+        <div class="footer-brand"><img src="/img/jvnni-logo.jpeg" alt="JVNNI" onerror="this.dataset.f=1;this.src=this.src.includes('/products/')?'../img/jvnni-logo.jpeg':'img/jvnni-logo.jpeg'" width="44" height="44" loading="lazy" decoding="async"><span>JVNNI</span></div>
+        <p class="footer-tagline">Premium streetwear and designer fashion. 100% authentic, verified by experts.</p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="#hero" class="footer-link" data-scroll-to="hero">Home</a></li>
+        <li><a href="#shop" class="footer-link" data-scroll-to="shop">Shop</a></li>
+        <li><a href="reviews.html" class="footer-link">Reviews</a></li>
+        <li><a href="#contact" class="footer-link" data-scroll-to="contact">Contact</a></li>
+        <li><a href="mailto:support@jvnni.com?subject=Returns%20%26%20Refunds" class="footer-link">Returns</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 JVNNI. All rights reserved. support@jvnni.com</span>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/shopjvnni/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zM17.5 6.5h.01"/></svg></a>
+        <a href="mailto:support@jvnni.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- AI Style Assistant Widget -->
+  <div class="ai-widget">
+    <div class="ai-panel">
+      <div class="ai-header">
+        <div class="ai-header-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a3 3 0 013 3c0 1.5-1 2.5-2 3v1h2a4 4 0 014 4v1h2v2h-2v1a4 4 0 01-4 4H8a4 4 0 01-4-4v-1H2v-2h2v-1a4 4 0 014-4h2V8c-1-.5-2-1.5-2-3a3 3 0 013-3z"/></svg>
+        </div>
+        <div class="ai-header-info">
+          <h4>Style Assistant</h4>
+          <p>AI-powered · Online</p>
+        </div>
+        <button class="ai-close" aria-label="Close chat">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div class="ai-messages"></div>
+      <div class="ai-suggestions">
+        <button class="ai-suggestion">Show me Balenciaga</button>
+        <button class="ai-suggestion">Sneakers under $400</button>
+        <button class="ai-suggestion">Recommend something</button>
+        <button class="ai-suggestion">Black hoodies</button>
+      </div>
+      <div class="ai-input-wrap">
+        <input type="text" class="ai-input" placeholder="Ask me anything...">
+        <button class="ai-send" aria-label="Send">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+        </button>
+      </div>
+    </div>
+    <button class="ai-toggle" aria-label="Open AI Assistant">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a3 3 0 013 3c0 1.5-1 2.5-2 3v1h2a4 4 0 014 4v1h2v2h-2v1a4 4 0 01-4 4H8a4 4 0 01-4-4v-1H2v-2h2v-1a4 4 0 014-4h2V8c-1-.5-2-1.5-2-3a3 3 0 013-3z"/><circle cx="9" cy="13" r="1"/><circle cx="15" cy="13" r="1"/></svg>
+    </button>
+  </div>
+
+  <!-- Floating Badge -->
+  <div class="floating-badge">Free shipping on orders over $500</div>
+
+  <!-- Product Modal -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal">
+      <button class="modal-close" aria-label="Close">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+      <div class="modal-content">
+        <div class="modal-image">
+          <button class="modal-gallery-prev" type="button" aria-label="Previous product image" style="display:none"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg></button>
+          <img alt="" crossorigin="anonymous">
+          <button class="modal-gallery-next" type="button" aria-label="Next product image" style="display:none"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg></button>
+          <div class="modal-gallery-count" style="display:none"></div>
+          <div class="modal-thumbs" style="display:none"></div>
+        </div>
+        <div class="modal-info">
+          <div class="modal-brand"></div>
+          <h3 class="modal-title"></h3>
+          <div class="modal-price"></div>
+          <div class="modal-sizes" style="display:none"></div>
+          <p class="modal-desc"></p>
+          <div class="modal-features">
+            <div class="modal-feature">100% Authenticity Guaranteed</div>
+            <div class="modal-feature">Original Box & Packaging</div>
+            <div class="modal-feature">Expert Verified</div>
+            <div class="modal-feature">Price Negotiable — DM for Details</div>
+          </div>
+          <div class="modal-actions">
+            <button class="btn-3d btn-3d-primary" id="modal-add-cart" data-magnetic>
+              Add to Bag
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+            <a href="#" class="btn-3d btn-3d-ghost" id="modal-view-shopify" rel="noopener" data-magnetic>View Details</a>
+          </div>
+        </div>
+      </div>
+
+      <button class="modal-close-bottom" type="button" aria-label="Close product page">
+        <span class="modal-close-bottom-btn">
+          <svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </span>
+        <span class="modal-close-bottom-label">Close</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/products.js?v=20260917085300"></script>
+  <script src="js/main.js?v=20260917085300"></script>
+  <script src="js/cart.js?v=20260917085300"></script>
+  <script src="js/hero-cutouts.js?v=20260917085300"></script>
+  <script src="js/enhancements.js?v=20260917085300"></script>
+
+  <!-- Cart Drawer -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping cart">
+    <div class="cart-drawer-head">
+      <h3>Your Bag</h3>
+      <button class="cart-close" id="cart-close" aria-label="Close cart">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-empty" id="cart-empty">
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.3"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 01-8 0"/></svg>
+      <p>Your bag is empty</p>
+      <button class="btn-3d btn-3d-ghost" id="cart-empty-shop">Browse Collection</button>
+    </div>
+    <div class="cart-foot" id="cart-foot">
+      <div class="cart-subtotal">
+        <span>Subtotal</span>
+        <span id="cart-subtotal-value">$0.00</span>
+      </div>
+      <p class="cart-note">Shipping and taxes calculated at checkout. Free shipping over $500.</p>
+      <button class="btn-3d btn-3d-primary cart-checkout-btn" id="cart-checkout">
+        Secure Checkout
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+      <div class="cart-trust">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Checkout secured by Shopify
+      </div>
+    </div>
+  </aside>
+
+  <script src="js/neon.js?v=20260917085300"></script>
+  <script src="js/perf.js?v=20260917085300" defer></script>
+</body>
+</html>

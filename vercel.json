@@ -1,0 +1,13 @@
+{
+  "rewrites": [
+    { "source": "/products/:handle", "destination": "/api/product?handle=:handle" }
+  ],
+  "headers": [
+    {
+      "source": "/products/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "s-maxage=300, stale-while-revalidate=600" }
+      ]
+    }
+  ]
+}

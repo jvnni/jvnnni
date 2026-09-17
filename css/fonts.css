@@ -1,0 +1,170 @@
+/* ============================================
+   JVNNI — CLASH DISPLAY, SELF-HOSTED
+   One typeface for the whole site.
+   Hierarchy comes from weight, size and tracking.
+   ============================================ */
+
+@font-face {
+  font-family: 'Clash Display';
+  src: url('../fonts/ClashDisplay-400.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Clash Display';
+  src: url('../fonts/ClashDisplay-500.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Clash Display';
+  src: url('../fonts/ClashDisplay-600.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Clash Display';
+  src: url('../fonts/ClashDisplay-700.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ---- One family, everywhere ---- */
+:root {
+  --font-display: 'Clash Display', 'Space Grotesk', Inter, sans-serif;
+  --font-body: 'Clash Display', 'Space Grotesk', Inter, sans-serif;
+  --font-mono: 'Clash Display', 'Space Grotesk', Inter, sans-serif;
+}
+
+*,
+*::before,
+*::after,
+input,
+select,
+textarea,
+button,
+optgroup {
+  font-family: 'Clash Display', 'Space Grotesk', Inter, sans-serif !important;
+}
+
+/* ============================================
+   TYPE TUNING FOR CLASH DISPLAY
+   It is a display face, so body copy needs
+   more line-height and headings need tighter
+   tracking to keep the luxury feel.
+   ============================================ */
+
+body {
+  font-weight: 400;
+  letter-spacing: 0.002em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* ---- Headings: tight, confident ---- */
+h1, h2, h3, h4, h5, h6,
+.section-title,
+.hero-logo-text,
+.modal-title,
+.nav-logo {
+  font-weight: 600;
+  letter-spacing: -0.022em;
+  line-height: 1.04;
+}
+
+h1, .hero-logo-text { font-weight: 700; letter-spacing: -0.035em; }
+h2, .section-title  { font-weight: 600; letter-spacing: -0.026em; }
+h3 { font-weight: 600; letter-spacing: -0.018em; }
+
+/* ---- Body copy: needs air with a display face ---- */
+p,
+.section-sub,
+.hero-sub,
+.modal-desc,
+.review-text,
+.footer-text,
+li {
+  font-weight: 400;
+  line-height: 1.68;
+  letter-spacing: 0.004em;
+}
+
+.section-sub,
+.hero-sub {
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* ---- Eyebrows / labels / small caps: open tracking ---- */
+.section-eyebrow,
+.modal-brand,
+.product-card-brand,
+.proof-card-tag,
+.vproof-tag,
+.neon-bar-track,
+.neon-bar-track span,
+.review-product,
+.stat-pill-label,
+.badge,
+.tag {
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+/* ---- Buttons: solid and legible ---- */
+.btn-3d,
+button,
+.nav-link {
+  font-weight: 600;
+  letter-spacing: 0.055em;
+}
+
+.nav-link { letter-spacing: 0.005em; font-weight: 500; }
+
+/* ---- Numerals: prices, stats, counters ---- */
+.modal-price,
+.product-card-price,
+.stat-pill-value,
+.cart-total,
+.proof-lightbox-counter,
+.stat-value {
+  font-weight: 600;
+  letter-spacing: -0.012em;
+  font-variant-numeric: tabular-nums lining-nums;
+  font-feature-settings: 'tnum' 1, 'lnum' 1;
+}
+
+/* ---- The marquees keep their own heavy display weight ---- */
+.hero-stripe-track span {
+  font-weight: 700;
+  letter-spacing: -0.022em;
+}
+
+.hero-stripe-track-alt span {
+  font-weight: 600;
+  letter-spacing: -0.012em;
+}
+
+/* ---- Clash Display has no true italic: use a slight slant ---- */
+em, i, .italic {
+  font-style: normal;
+  font-synthesis: none;
+  transform: skewX(-8deg);
+  display: inline-block;
+  font-weight: 500;
+}
+
+/* ---- Never let the browser fake a bolder weight ---- */
+strong, b {
+  font-weight: 600;
+  font-synthesis: none;
+}
