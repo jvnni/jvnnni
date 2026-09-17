@@ -1,6 +1,6 @@
 // JVNNI Cart — on-site cart with Shopify checkout handoff
 (function () {
-  const SHOP_DOMAIN = 'https://721k2s-qn.myshopify.com';
+  const SHOP_DOMAIN = 'https://jvnni.com';
 
   // In-memory cart state (persistent storage is unavailable in the preview iframe)
   let memory = [];
